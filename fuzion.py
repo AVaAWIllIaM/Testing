@@ -37,3 +37,12 @@ def raz(list_less):
     pull_result = dict(zip(abc_nox, true_nam))
     result = {k: v for k, v in pull_result.items() if v != 0}
     return result
+
+
+def cal_fre(dict_co):
+    total = sum(dict_co.values())
+    frequ = {}
+    for k, count in dict_co.items():
+        perce = (count/total)*100
+        frequ[k] = round(perce, 1)
+    return frequ
