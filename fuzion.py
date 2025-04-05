@@ -1,9 +1,8 @@
 def raz(list_less):  # Вход - строка, Выход - словарь где, ключь - буква, значение - количество
     result = {}
     for i in list_less:
-        if i.isalpha():
-            i_lower = i.lower()
-            result[i_lower] = result.get(i_lower, 0)+1
+        i_lower = i.lower()
+        result[i_lower] = result.get(i_lower, 0)+1
     return result
 
 
