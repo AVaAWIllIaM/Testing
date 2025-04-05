@@ -2,6 +2,8 @@ import fuzion as fuz
 lissen = input("Введите преложение которое хотите разбить....\n\nВвод:\n")
 dict_toy = fuz.raz(lissen)
 dict_prezent = fuz.cal_fre(dict_toy)
-for k, v in dict_toy.items():
-    print(
-        f"{k} встречается {v} - раз в процентном соотношении {dict_prezent[k]}%")
+result = {key: {'name': key,
+                'num': dict_toy[key],
+                'proc': dict_prezent[key]} for key in dict_toy}
+fo = input("Введите о какой букве выдать информацию:\n\nВвод...\n")
+print(f"Буква: {result[fo]['name']}\nКоличество встречаний: {result[fo]['num']}\nПроцентное соотношение: {result[fo]['proc']}")
