@@ -1,6 +1,5 @@
-def raz(list_less):
-    list_less = list_less.lower()
-    list_lissen = list(list_less)
+def raz(list_less):  # Вход - строка, Выход - словарь где, ключь - буква, значение - количество
+    list_lissen = list(list_less.lower())
     a = list_lissen.count('a')
     b = list_lissen.count('b')
     c = list_lissen.count('c')
@@ -39,7 +38,7 @@ def raz(list_less):
     return result
 
 
-def cal_fre(dict_co):
+def cal_fre(dict_co):  # Вход - словарь, Выход - словарь где, ключь - остается прежним, значение - процент частоты
     total = sum(dict_co.values())
     frequ = {}
     for k, count in dict_co.items():
