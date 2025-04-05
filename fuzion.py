@@ -45,3 +45,18 @@ def cal_fre(dict_co):  # Вход - словарь, Выход - словарь 
         perce = (count/total)*100
         frequ[k] = round(perce, 1)
     return frequ
+
+
+def analize(text, search_letter):
+    result = {}
+    count = text.count(search_letter)
+
+    if count == 0:
+        return {False}
+
+    following_letters = []
+    for i in range(len(text)):
+        if text[i] == search_letter and i + 1 < len(text):
+            following_letters.append(text[i+1])
+    result[search_letter] = following_letters
+    return result
