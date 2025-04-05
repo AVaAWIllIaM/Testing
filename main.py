@@ -1,6 +1,7 @@
 import fuzion as fuz
 lissen = input("Введите преложение которое хотите разбить....\n\nВвод:\n")
 fo = input("Введите о какой букве выдать информацию:\n\nВвод...\n")
+fo = str(fo)
 dict_toy = fuz.raz(lissen)
 dict_prezent = fuz.cal_fre(dict_toy)
 analize = fuz.analize(lissen, fo)
