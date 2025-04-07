@@ -54,6 +54,9 @@ def analize_text(text):  # Вход - текст, Выход - словарь г
         if total_foll > 0:
             for next_char, count in data['fir'].items():
                 data['fir'][next_char] = round((count/total_foll)*100, 2)
+    result = dict(result)
+    for char, data in result.items():
+        data['fir'] = dict(data['fir'])
     return result
 
 
