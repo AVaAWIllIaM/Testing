@@ -4,7 +4,7 @@ from collections import defaultdict as de
 def raz(list_less):  # Вход - строка, Выход - словарь где, ключь - буква, значение - количество
     result = {}
     for i in list_less:
-        i_lower = i.lower()
+        # i_lower = i.lower()
         result[i_lower] = result.get(i_lower, 0)+1
     return result
 
@@ -39,7 +39,7 @@ def analize_text(text):  # Вход - текст, Выход - словарь г
         'nomber': 0,
         'fir': de(int)
     })
-    text = text.lower()
+    # text = text.lower()
     for i in range(len(text)-1):
         current_char = text[i]
         next_char = text[i+1]

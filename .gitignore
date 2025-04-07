@@ -1,2 +1,4 @@
 pycore
 Test.py
+*.txt
+bin
