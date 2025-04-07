@@ -15,7 +15,7 @@ def cal_fre(dict_co):  # Вход - словарь, Выход - словарь 
     return frequ
 
 
-def analize(text, search_letter):
+def analize(text, search_letter):  # Вход - текст, буква которую ищем, Выход - словарь где ключь название буквы, значение - список букв идущих за ней
     result = {}
     count = text.count(search_letter)
 
