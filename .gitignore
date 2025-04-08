@@ -2,3 +2,4 @@ pycore
 Test.py
 *.txt
 bin
+__pycache__
